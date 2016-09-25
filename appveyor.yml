@@ -2,8 +2,10 @@ init:
   - git config --global core.autocrlf input
 build_script:
   - cmd: build.cmd
+after_build:
+  - dotnet pack -c Release src\CommandLine
 test: off
 version: 0.0.1.{build}
 artifacts:
-  - path: Build
-    name: Build
+  - path: src\CommandLine\Bin\Release\CommandLine.2.0.275.nupkg
+    name: CommandLine.2.0.275
