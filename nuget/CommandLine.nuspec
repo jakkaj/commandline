@@ -37,8 +37,8 @@
     <file src="..\build\CommandLine.XML" target="lib\net40\CommandLine.XML" />
     <file src="..\build\CommandLine.dll" target="lib\net45\CommandLine.dll" />
     <file src="..\build\CommandLine.XML" target="lib\net45\CommandLine.XML" />
-    <file src="src\CommandLine.dotnet\bin\portable-dotnet\Release\CommandLine.dll" target="lib\netstandard1.3\CommandLine.dll" />
-    <file src="src\CommandLine.dotnet\bin\portable-dotnet\Release\CommandLine.xml" target="lib\netstandard1.3\CommandLine.xml" />
+    <file src="..\src\CommandLine.dotnet\bin\portable-dotnet\Release\CommandLine.dll" target="lib\netstandard1.3\CommandLine.dll" />
+    <file src="..\src\CommandLine.dotnet\bin\portable-dotnet\Release\CommandLine.xml" target="lib\netstandard1.3\CommandLine.xml" />
     <file src=".\readme.txt" target="readme.txt" />
   </files>
 </package>
