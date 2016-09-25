@@ -1,9 +1,26 @@
 init:
   - git config --global core.autocrlf input
+
 build_script:
   - cmd: build.cmd
+  - appveyor-retry dotnet restore -v Minimal
+  - dotnet build "src\CommandLine" -c Release
+after_build:
+  - dotnet pack "src\CommandLine" -c Release --output artifacts
 test: off
 version: 0.0.1.{build}
 artifacts:
-  - path: bin
-    name: bin
+  - path: artifacts\CommandLine.2.0.275.nupkg
+    name: CommandLine.2.0.275
+deploy:
+  release: commandlinecore-v$(appveyor_build_version)
+  description: '.NET Core Build of CommandLine'
+  provider: GitHub
+  auth_token:
+    secure: yEs/1V9neph0eDwPHZ9bLYMnaquhV4N00K41T5Hc7NCSInp+1nwXggGNArXIwbyE # your encrypted token from GitHub
+  artifact: artifacts\CommandLine.2.0.275.nupkg            # upload all NuGet packages to release assets
+  draft: false
+  prerelease: false
+  on:
+    branch: dotnet-core                 # release from master branch only
+    appveyor_repo_tag: true        # deploy on tag push only
