@@ -10,15 +10,15 @@ after_build:
 test: off
 version: 0.0.1.{build}
 artifacts:
-  - path: artifacts\CommandLine.2.0.275.nupkg
-    name: CommandLine.2.0.275
+  - path: artifacts\CommandLine.0.0.1.nupkg
+    name: CommandLine.0.0.1.nupkg
 deploy:
   release: commandlinecore-v$(appveyor_build_version)
   description: '.NET Core Build of CommandLine'
   provider: GitHub
   auth_token:
     secure: yEs/1V9neph0eDwPHZ9bLYMnaquhV4N00K41T5Hc7NCSInp+1nwXggGNArXIwbyE # your encrypted token from GitHub
-  artifact: artifacts\CommandLine.2.0.275.nupkg            # upload all NuGet packages to release assets
+  artifact: artifacts\CommandLine.0.0.1.nupkg            # upload all NuGet packages to release assets
   draft: false
   prerelease: false
   on:

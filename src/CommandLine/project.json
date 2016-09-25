@@ -1,15 +1,16 @@
 ﻿{
-  "version": "2.0.275-*",
+  "version": "0.0.1-*",
   "authors": [
-    "Giacomo Stelluti Scala"
+    "Giacomo Stelluti Scala, jakkaj"
   ],
-  "title": "Command Line Parser Library",
-  "description": "Terse syntax C# command line parser for .NET with F# support. The Command Line Parser Library offers to CLR applications a clean and concise API for manipulating command line arguments and related tasks.",
+  "title": "Command Line Parser Library - dotnet temp build",
+  "description": "(temp only) Terse syntax C# command line parser for .NET with F# support. The Command Line Parser Library offers to CLR applications a clean and concise API for manipulating command line arguments and related tasks.",
   "packOptions": {
     "licenseUrl": "https://raw.githubusercontent.com/gsscoder/commandline/master/doc/LICENSE",
     "owners": [
       "gimmemoore",
-      "gsscoder"
+      "gsscoder",
+      "jakkaj"
     ],
     "repository": {
       "type": "git",
