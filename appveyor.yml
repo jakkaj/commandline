@@ -3,7 +3,7 @@ init:
 build_script:
   - cmd: build.cmd
 after_build:
-  - nuget\nuget.exe pack CommandLine.nuspec
+  - nuget pack nuget\CommandLine.nuspec
 test: off
 version: 0.0.1.{build}
 artifacts:
